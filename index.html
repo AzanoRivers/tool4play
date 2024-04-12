@@ -3,44 +3,67 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/img/jumebara.ico" type="image/x-icon">
     <title>Tools4Play | Jumebara</title>
-  <link rel="stylesheet" crossorigin href="/assets/index-BGSX0pRB.css">
+  <link rel="stylesheet" crossorigin href="/assets/index-CDKw3ZWT.css">
 </head>
 
 <body class="bg-sky-950 p-4">
     <h1 class="p-4 mb-8 text-center text-4xl font-bold text-green-600 border-b-4 border-dotted border-lime-600">Jumebara</h1>
-    <main class="flex col-span-3 items-center justify-evenly size-full p-4">
-        <section id="counter1" class="relative min-w-80 border-dashed border-4 border-lime-600 p-3">
+    <main class="flex flex-wrap items-center justify-evenly size-full gap-5">
+        <section id="counter1" class="relative size-full min-w-80 max-w-96 border-dashed border-4 border-lime-600 p-3">
             <img class="invisible border-dotted border-2 border-red-600 transition-opacity animate-pulse absolute top-2 left-3" src="/img/jumebara.ico">
-            <article class="flex md:flex-row lg:flex-col gap-2">
-                <span class="text-3xl text-center text-white">0</span>
-                <input class="text-center p-2" type="number" max="100" placeholder="41 seconds is recommended">
-                <button class="start bg-lime-700 p-2 font-bold text-lime-200">Start</button>
-                <button class="reset bg-lime-900 p-2 font-bold text-lime-200">Reset</button>
-                <button class="stop bg-orange-300 p-2 font-bold text-red-800">Stop</button>
+            <aside class="flex justify-center items-center gap-2 absolute top-2 right-3 w-20 h-10 p-1">
+                <span class="plus text-lime-500 border-2 border-dashed border-lime-600 cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>                      
+                </span>
+                <span class="minus text-lime-500 border-2 border-dashed border-lime-600 cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14" /></svg>                      
+                </span>
+            </aside>
+            <article class="flex flex-col gap-2">
+                <span class="timer select-none text-3xl text-center text-white">0</span>
+                <input class="text-center p-2" type="number" max="100" placeholder="43 seconds is recommended">
+                <button class="start select-none bg-lime-700 p-2 font-bold text-lime-200">Start</button>
+                <button class="reset select-none bg-lime-900 p-2 font-bold text-lime-200">Reset</button>
+                <button class="stop select-none bg-orange-300 p-2 font-bold text-red-800">Stop</button>
             </article>
         </section>
-        <section id="counter2" class="relative min-w-80 border-dashed border-4 border-lime-600 p-3">
+        <section id="counter2" class="relative size-full min-w-80 max-w-96 border-dashed border-4 border-lime-600 p-3">
             <img class="invisible border-dotted border-2 border-red-600 transition-opacity animate-pulse absolute top-2 left-3" src="/img/jumebara.ico">
+            <aside class="flex justify-center items-center gap-2 absolute top-2 right-3 w-20 h-10 p-1">
+                <span class="plus text-lime-500 border-2 border-dashed border-lime-600 cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>                      
+                </span>
+                <span class="minus text-lime-500 border-2 border-dashed border-lime-600 cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14" /></svg>                      
+                </span>
+            </aside>
             <article class="flex flex-col gap-2">
-                <span class="text-3xl text-center text-white">0</span>
-                <input class="text-center p-2" type="number" max="100" placeholder="42 seconds is recommended">
-                <button class="start bg-lime-700 p-2 font-bold text-lime-200">Start</button>
-                <button class="reset bg-lime-900 p-2 font-bold text-lime-200">Reset</button>
-                <button class="stop bg-orange-300 p-2 font-bold text-red-800">Stop</button>
+                <span class="timer select-none text-3xl text-center text-white">0</span>
+                <input class="text-center p-2" type="number" max="100" placeholder="43 seconds is recommended">
+                <button class="start select-none bg-lime-700 p-2 font-bold text-lime-200">Start</button>
+                <button class="reset select-none bg-lime-900 p-2 font-bold text-lime-200">Reset</button>
+                <button class="stop select-none bg-orange-300 p-2 font-bold text-red-800">Stop</button>
             </article>
         </section>
-        <section id="counter3" class="relative min-w-80 border-dashed border-4 border-lime-600 p-3">
+        <section id="counter3" class="relative size-full min-w-80 max-w-96 border-dashed border-4 border-lime-600 p-3">
             <img class="invisible border-dotted border-2 border-red-600 transition-opacity animate-pulse absolute top-2 left-3" src="/img/jumebara.ico">
+            <aside class="flex justify-center items-center gap-2 absolute top-2 right-3 w-20 h-10 p-1">
+                <span class="plus text-lime-500 border-2 border-dashed border-lime-600 cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>                      
+                </span>
+                <span class="minus text-lime-500 border-2 border-dashed border-lime-600 cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14" /></svg>                      
+                </span>
+            </aside>
             <article class="flex flex-col gap-2">
-                <span class="text-3xl text-center text-white">0</span>
-                <input class="text-center p-2" type="number" max="100" placeholder="42 seconds is recommended">
-                <button class="start bg-lime-700 p-2 font-bold text-lime-200">Start</button>
-                <button class="reset bg-lime-900 p-2 font-bold text-lime-200">Reset</button>
-                <button class="stop bg-orange-300 p-2 font-bold text-red-800">Stop</button>
+                <span class="timer select-none text-3xl text-center text-white">0</span>
+                <input class="text-center p-2" type="number" max="100" placeholder="43 seconds is recommended">
+                <button class="start select-none bg-lime-700 p-2 font-bold text-lime-200">Start</button>
+                <button class="reset select-none bg-lime-900 p-2 font-bold text-lime-200">Reset</button>
+                <button class="stop select-none bg-orange-300 p-2 font-bold text-red-800">Stop</button>
             </article>
         </section>
     </main>

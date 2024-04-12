@@ -23,7 +23,7 @@ class MyCounter {
   }
   #_countDown() {
     const $INPUT = this._counter.querySelector('input'),
-      $SPAN = this._counter.querySelector('span'),
+      $TIMER = this._counter.querySelector('.timer'),
       $IMG = this._counter.querySelector('img');
     this._time--;
     if (this._time <= 0) {
@@ -43,40 +43,57 @@ class MyCounter {
       console.log("stop");
       clearInterval(this._interval);
     }
-    $SPAN.textContent = this._time;
+    $TIMER.textContent = this._time;
+  }
+  #_controlsTime(event) {
+    const $TIMER = this._counter.querySelector('.timer'),
+      $CONTROl_PLUS = event.target.closest('.plus'),
+      $CONTROl_MINUS = event.target.closest('.minus');
+    if (this._play) {
+      if ($CONTROl_PLUS) {
+        this._time++;
+      }
+      if ($CONTROl_MINUS) {
+        this._time--;
+      }
+      $TIMER.textContent = this._time;
+    } else {
+      console.warn('Counter is not running...');
+    }
+
   }
   #_reset() {
     if (this._play) {
       const $INPUT = this._counter.querySelector('input'),
-        $SPAN = this._counter.querySelector('span');
+        $TIMER = this._counter.querySelector('.timer');
       this._time = $INPUT.value || 0;
-      $SPAN.textContent = $INPUT.value || 0;
+      $TIMER.textContent = $INPUT.value || 0;
     } else {
       const $INPUT = this._counter.querySelector('input'),
-        $SPAN = this._counter.querySelector('span');
+        $TIMER = this._counter.querySelector('.timer');
       this._time = 0;
-      $SPAN.textContent = 0;
+      $TIMER.textContent = 0;
       $INPUT.value = '';
     }
   }
   #_stop() {
     this._play = false;
-    const $SPAN = this._counter.querySelector('span'),
+    const $TIMER = this._counter.querySelector('.timer'),
       $INPUT = this._counter.querySelector('input');
     $INPUT.value = '';
     let newtime = 0;
     this._time = parseInt(newtime, 10);
-    $SPAN.textContent = this._time;
+    $TIMER.textContent = this._time;
   }
   #_start() {
     if (!this._play) {
       this._play = true;
-      const $SPAN = this._counter.querySelector('span'),
+      const $TIMER = this._counter.querySelector('.timer'),
         $INPUT = this._counter.querySelector('input');
       let newtime = parseInt($INPUT.value, 10);
       if (newtime > 0) {
         this._time = newtime;
-        $SPAN.textContent = this._time;
+        $TIMER.textContent = this._time;
         // INTERVALO
         this._interval = setInterval(this.#_countDown.bind(this), 1000);
       } else {
@@ -90,9 +107,13 @@ class MyCounter {
   init() {
     const $START = this._counter.querySelector('.start'),
       $STOP = this._counter.querySelector('.stop'),
-      $RESET = this._counter.querySelector('.reset');
+      $RESET = this._counter.querySelector('.reset'),
+      $PLUS = this._counter.querySelector('.plus'),
+      $MINUS = this._counter.querySelector('.minus');
     $START.addEventListener('click', this.#_start.bind(this));
     $STOP.addEventListener('click', this.#_stop.bind(this));
     $RESET.addEventListener('click', this.#_reset.bind(this));
+    $PLUS.addEventListener('click', this.#_controlsTime.bind(this));
+    $MINUS.addEventListener('click', this.#_controlsTime.bind(this));
   };
 }
